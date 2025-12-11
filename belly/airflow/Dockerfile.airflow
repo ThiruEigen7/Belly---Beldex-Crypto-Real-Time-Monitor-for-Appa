@@ -1,0 +1,45 @@
+FROM python:3.11-slim-bookworm
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    AIRFLOW_HOME=/home/airflow \
+    AIRFLOW__CORE__UNIT_TEST_MODE=False
+
+# Create airflow user
+RUN useradd -m -u 1000 airflow
+
+# Set working directory
+WORKDIR /home/airflow
+
+# Copy requirements
+COPY requirements.txt /tmp/requirements.txt
+
+# Install Python dependencies including Airflow (skip system packages)
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir \
+    apache-airflow[postgres,celery,redis]==2.7.3 \
+    asyncpg \
+    pandas \
+    prophet \
+    statsmodels \
+    scikit-learn \
+    redis[asyncio] \
+    pydantic \
+    httpx \
+    python-dotenv && \
+    if [ -f /tmp/requirements.txt ]; then pip install --no-cache-dir -r /tmp/requirements.txt; fi
+
+# Create directories
+RUN mkdir -p $AIRFLOW_HOME/dags $AIRFLOW_HOME/logs $AIRFLOW_HOME/plugins
+
+# Change ownership to airflow user
+RUN chown -R airflow:airflow $AIRFLOW_HOME
+
+# Switch to airflow user
+USER airflow
+
+# Expose webserver port
+EXPOSE 8080
+
+# Default command
+CMD ["airflow", "version"]

@@ -1,0 +1,41 @@
+# Dockerfile for Kafka Producer - Manjaro Linux Compatible
+FROM python:3.11-slim
+
+LABEL maintainer="BELLY Streaming Layer"
+LABEL description="Beldex Kafka Producer for real-time price monitoring"
+
+WORKDIR /app
+
+# Install system dependencies (lean set for slim image)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user for security
+RUN useradd -m -u 1000 producer && chown -R producer:producer /app
+
+# Install Python dependencies
+COPY --chown=producer:producer requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy backend services (needed for imports)
+COPY --chown=producer:producer ../backend/services ./backend/services
+COPY --chown=producer:producer ../backend/__init__.py ./backend/
+
+# Copy producer code
+COPY --chown=producer:producer producer.py .
+COPY --chown=producer:producer .env* ./
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Switch to non-root user
+USER producer
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD python -c "import sys; sys.exit(0)"
+
+# Run producer
+CMD ["python", "producer.py"]

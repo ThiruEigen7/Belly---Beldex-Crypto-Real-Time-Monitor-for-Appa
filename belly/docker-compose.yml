@@ -1,0 +1,196 @@
+version: '3.9'
+
+# BELLY Streaming Layer - Docker Compose Configuration for Manjaro Linux
+# Includes: Kafka/Redpanda, Redis, PostgreSQL, and monitoring
+
+services:
+  # ============================================
+  # Message Broker - Redpanda (Kafka Compatible)
+  # ============================================
+  redpanda:
+    image: docker.redpanda.com/redpanda:latest
+    container_name: belly-redpanda
+    hostname: redpanda
+    ports:
+      - "8081:8081"    # REST API
+      - "8082:8082"    # Schema Registry
+      - "29092:29092"  # Kafka API Internal
+      - "9092:9092"    # Kafka API External
+      - "29644:29644"  # Admin API Internal
+      - "9644:9644"    # Admin API External
+    environment:
+      - REDPANDA_AUTO_CREATE_TOPICS_ENABLED=true
+      - REDPANDA_ENABLE_MEMORY_STRICT_MODE=true
+    volumes:
+      - redpanda-data:/var/lib/redpanda/data
+    networks:
+      - belly-network
+    healthcheck:
+      test: ["CMD", "rpk", "cluster", "health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+
+  # ============================================
+  # Cache Layer - Redis
+  # ============================================
+  redis:
+    image: redis:7-alpine
+    container_name: belly-redis
+    hostname: redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-belly_redis_pwd}
+    volumes:
+      - redis-data:/data
+    networks:
+      - belly-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+  # ============================================
+  # Database - PostgreSQL
+  # ============================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: belly-postgres
+    hostname: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-belly_postgres_pwd}
+      POSTGRES_DB: ${POSTGRES_DB:-belly_db}
+      POSTGRES_INITDB_ARGS: "-c max_connections=100"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - belly-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+  # ============================================
+  # Kafka Producer
+  # ============================================
+  producer:
+    build:
+      context: ..
+      dockerfile: belly/streaming/DockerFile.producer
+    container_name: belly-producer
+    depends_on:
+      redpanda:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKERS: redpanda:29092
+      REDIS_URL: redis://:${REDIS_PASSWORD:-belly_redis_pwd}@redis:6379/0
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./streaming:/app/streaming
+      - ./:/app
+    networks:
+      - belly-network
+    restart: unless-stopped
+
+  # ============================================
+  # Kafka Consumer
+  # ============================================
+  consumer:
+    build:
+      context: ..
+      dockerfile: belly/streaming/DockerFile.consumer
+    container_name: belly-consumer
+    depends_on:
+      redpanda:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKERS: redpanda:29092
+      KAFKA_GROUP_ID: belly-consumer-group
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-belly_postgres_pwd}@postgres:5432/${POSTGRES_DB:-belly_db}
+      REDIS_URL: redis://:${REDIS_PASSWORD:-belly_redis_pwd}@redis:6379/0
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./streaming:/app/streaming
+      - ./:/app
+    networks:
+      - belly-network
+    restart: unless-stopped
+
+  # ============================================
+  # Redpanda Console - UI for Kafka Management
+  # ============================================
+  redpanda-console:
+    image: docker.redpanda.com/console:latest
+    container_name: belly-redpanda-console
+    depends_on:
+      - redpanda
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_BROKERS: redpanda:29092
+      KAFKA_SCHEMAREGISTRY_ENABLED: "true"
+      KAFKA_SCHEMAREGISTRY_URLS: http://redpanda:8082
+    networks:
+      - belly-network
+    restart: unless-stopped
+
+  # ============================================
+  # pgAdmin - PostgreSQL Management UI
+  # ============================================
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: belly-pgadmin
+    depends_on:
+      - postgres
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@belly.local}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-belly_pgadmin_pwd}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - belly-network
+    restart: unless-stopped
+
+# ============================================
+# Volumes for Persistent Data
+# ============================================
+volumes:
+  redpanda-data:
+    driver: local
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+  pgadmin-data:
+    driver: local
+
+# ============================================
+# Networks
+# ============================================
+networks:
+  belly-network:
+    driver: bridge

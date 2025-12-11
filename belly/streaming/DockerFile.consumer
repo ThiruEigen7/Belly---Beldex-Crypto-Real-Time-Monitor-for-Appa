@@ -1,0 +1,42 @@
+# Dockerfile for Kafka Consumer - Manjaro Linux Compatible
+FROM python:3.11-slim
+
+LABEL maintainer="BELLY Streaming Layer"
+LABEL description="Beldex Kafka Consumer for real-time price processing"
+
+WORKDIR /app
+
+# Install system dependencies (lean set for slim image)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user for security
+RUN useradd -m -u 1000 consumer && chown -R consumer:consumer /app
+
+# Install Python dependencies
+COPY --chown=consumer:consumer requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy backend services (needed for imports)
+COPY --chown=consumer:consumer ../backend/services ./backend/services
+COPY --chown=consumer:consumer ../backend/__init__.py ./backend/
+COPY --chown=consumer:consumer ../backend/models.py ./backend/
+
+# Copy consumer code
+COPY --chown=consumer:consumer consumer.py .
+COPY --chown=consumer:consumer .env* ./
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Switch to non-root user
+USER consumer
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD python -c "import sys; sys.exit(0)"
+
+# Run consumer
+CMD ["python", "consumer.py"]
