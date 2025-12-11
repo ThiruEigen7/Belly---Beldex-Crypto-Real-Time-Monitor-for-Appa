@@ -3,4 +3,5 @@ assets/external/
 *.db
 *.py[cod]
 .web
+.env
 __pycache__/
