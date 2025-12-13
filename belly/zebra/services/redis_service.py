@@ -37,6 +37,7 @@ class RedisService:
 
         self.client = Redis(url=self.redis_url, token=self.redis_token)
         self.key_prefix = "belly:"
+        self.connected = True  # upstash-redis handles connection internally
 
         # TTL defaults (in seconds)
         self.ttl_current_price = 900  # 15 minutes
@@ -57,7 +58,8 @@ class RedisService:
         for attempt in range(self.max_retries):
             try:
                 # Test connection
-                await self.client.ping()
+                self.client.ping()
+                self.connected = True
                 logger.info(f"✅ Redis connected successfully (attempt {attempt + 1})")
                 return
                 
@@ -69,15 +71,18 @@ class RedisService:
                     await asyncio.sleep(self.retry_delay)
                 else:
                     logger.error("❌ Redis connection failed after all retries")
+                    self.connected = False
                     
             except Exception as e:
                 logger.error(f"❌ Unexpected error connecting to Redis: {str(e)}")
+                self.connected = False
                 break
     
     async def disconnect(self):
         """Close Redis connection gracefully."""
         try:
-            await self.client.close()
+            # upstash-redis doesn't require explicit close
+            self.connected = False
             logger.info("✅ Redis connection closed")
         except Exception as e:
             logger.error(f"❌ Error closing Redis connection: {str(e)}")
@@ -90,7 +95,7 @@ class RedisService:
             bool: True if Redis responds, False otherwise
         """
         try:
-            result = await self.client.ping()
+            result = self.client.ping()
             return result
         except Exception as e:
             logger.warning(f"⚠️ Redis ping failed: {str(e)}")
@@ -131,9 +136,9 @@ class RedisService:
         """
         try:
             if ttl:
-                await self.client.set(key, value, ex=ttl)
+                self.client.set(key, value, ex=ttl)
             else:
-                await self.client.set(key, value)
+                self.client.set(key, value)
             return True
         except Exception as e:
             logger.error(f"❌ Redis SET error for key '{key}': {str(e)}")

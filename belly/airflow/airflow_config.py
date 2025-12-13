@@ -14,7 +14,7 @@ AIRFLOW__CORE__PLUGINS_FOLDER = os.path.join(os.path.dirname(__file__), 'plugins
 AIRFLOW__CORE__EXECUTOR = 'LocalExecutor'
 AIRFLOW__CORE__SQL_ALCHEMY_CONN = os.getenv(
     'AIRFLOW_SQL_ALCHEMY_CONN',
-    'sqlite:////home/airflow/airflow.db'
+    'postgresql://postgres:postgres@localhost:5432/airflow'
 )
 
 # Load examples
@@ -70,16 +70,16 @@ AIRFLOW__CELERY__RESULT_BACKEND = os.getenv(
 # Enable API
 AIRFLOW__API__AUTH_BACKEND = 'airflow.api.auth.backend.basic_auth'
 
-# Custom Belly configuration
-BELLY_DB_HOST = os.getenv('POSTGRES_HOST', 'postgres')
-BELLY_DB_PORT = int(os.getenv('POSTGRES_PORT', 5432))
-BELLY_DB_USER = os.getenv('POSTGRES_USER', 'postgres')
-BELLY_DB_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'postgres')
-BELLY_DB_NAME = os.getenv('POSTGRES_DB', 'belly')
+# Custom Belly configuration - Using Cloud Services
+BELLY_SUPABASE_URL = os.getenv('SUPABASE_URL', 'https://bcioieesyhilfrfgogpq.supabase.co')
+BELLY_SUPABASE_KEY = os.getenv('SUPABASE_ANON_KEY', '')
 
-BELLY_REDIS_HOST = os.getenv('REDIS_HOST', 'redis')
-BELLY_REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
-BELLY_REDIS_DB = int(os.getenv('REDIS_DB', 0))
+BELLY_REDIS_URL = os.getenv('REDIS_URL', '')
+BELLY_REDIS_TOKEN = os.getenv('REDIS_TOKEN', '')
+
+# Kafka/Redpanda configuration
+BELLY_KAFKA_BROKERS = os.getenv('KAFKA_BROKERS', '')
+BELLY_KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', 'belly-price')
 
 # Prediction configuration
 BELLY_PREDICTION_MODEL = os.getenv('PREDICTION_MODEL', 'prophet')

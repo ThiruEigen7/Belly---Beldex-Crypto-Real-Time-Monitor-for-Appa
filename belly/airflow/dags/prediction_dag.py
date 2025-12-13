@@ -12,7 +12,7 @@ Tasks:
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.operators.dummy import DummyOperator
+from airflow.operators.empty import EmptyOperator
 import logging
 import asyncio
 import sys
@@ -21,9 +21,18 @@ import os
 logger = logging.getLogger(__name__)
 
 # Add parent directory to path for imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, project_root)
 
-from zebra.services.db_service import DatabaseService
+# Load environment variables
+from dotenv import load_dotenv
+env_path = os.path.join(project_root, '..', '.env')
+if os.path.exists(env_path):
+    load_dotenv(env_path)
+else:
+    logger.warning(f"⚠️ .env file not found at {env_path}")
+
+from belly.zebra.services.db_service import DatabaseService
 
 # Initialize database service
 db_service = DatabaseService()
@@ -53,15 +62,21 @@ def fetch_historical_data(**context):
     logger.info("📊 Fetching historical price data (30 days)...")
     
     async def fetch():
-        await db_service.connect()
-        prices = await db_service.get_price_history(days=30)
-        await db_service.disconnect()
-        
-        if not prices:
-            raise Exception("❌ No historical price data found")
-        
-        logger.info(f"✅ Fetched {len(prices)} price records")
-        return prices
+        try:
+            await db_service.connect()
+            prices = await db_service.get_price_history(days=30)
+            await db_service.disconnect()
+            
+            if not prices:
+                logger.warning("⚠️ No historical price data found")
+                return []
+            
+            logger.info(f"✅ Fetched {len(prices)} price records")
+            return prices
+        except Exception as e:
+            logger.error(f"❌ Error fetching price data: {str(e)}")
+            await db_service.disconnect()
+            raise
     
     prices = asyncio.run(fetch())
     context['task_instance'].xcom_push(key='prices', value=prices)
@@ -244,7 +259,7 @@ def notify_predictions(**context):
 
 
 # Define tasks
-start = DummyOperator(task_id='start', dag=dag)
+start = EmptyOperator(task_id='start', dag=dag)
 
 fetch_data = PythonOperator(
     task_id='fetch_historical_data',
@@ -281,7 +296,7 @@ notify = PythonOperator(
     dag=dag
 )
 
-end = DummyOperator(task_id='end', dag=dag)
+end = EmptyOperator(task_id='end', dag=dag)
 
 # Define dependencies
 start >> fetch_data >> train_model >> evaluate >> store >> notify >> end

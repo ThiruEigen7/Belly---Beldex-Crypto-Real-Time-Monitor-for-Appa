@@ -11,7 +11,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-belly}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./belly/zebra/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+      - ../../belly/zebra/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
     ports:
       - "5432:5432"
     healthcheck:
@@ -50,22 +50,31 @@ services:
       AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
       AIRFLOW__CORE__PLUGINS_FOLDER: /home/airflow/plugins
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-airflow}
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-airflow}
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-belly}
       REDIS_URL: redis://redis:6379/0
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      PYTHONPATH: /home/airflow
     volumes:
-      - ./belly/airflow/dags:/home/airflow/dags
-      - ./belly/airflow/plugins:/home/airflow/plugins
-      - ./belly:/home/airflow/belly
+      - ./dags:/home/airflow/dags
+      - ./plugins:/home/airflow/plugins
+      - ../../belly:/home/airflow/belly
       - airflow_logs:/home/airflow/logs
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
-    command: airflow scheduler
+    command: >
+      bash -c "
+        airflow db init &&
+        airflow users create --username admin --password admin123 --firstname Admin --lastname User --role Admin --email admin@belly.local || true &&
+        airflow scheduler
+      "
     networks:
       - belly-network
 
@@ -80,21 +89,25 @@ services:
       AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
       AIRFLOW__CORE__PLUGINS_FOLDER: /home/airflow/plugins
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-airflow}
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-airflow}
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__WEBSERVER__RBAC: 'true'
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-belly}
       REDIS_URL: redis://redis:6379/0
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      PYTHONPATH: /home/airflow
       AIRFLOW_USERNAME: ${AIRFLOW_USERNAME:-admin}
       AIRFLOW_PASSWORD: ${AIRFLOW_PASSWORD:-admin123}
       AIRFLOW_FIRSTNAME: Belly
       AIRFLOW_LASTNAME: Admin
       AIRFLOW_EMAIL: ${AIRFLOW_EMAIL:-admin@belly.local}
     volumes:
-      - ./belly/airflow/dags:/home/airflow/dags
-      - ./belly/airflow/plugins:/home/airflow/plugins
-      - ./belly:/home/airflow/belly
+      - ./dags:/home/airflow/dags
+      - ./plugins:/home/airflow/plugins
+      - ../../belly:/home/airflow/belly
       - airflow_logs:/home/airflow/logs
     ports:
       - "8080:8080"
@@ -120,16 +133,19 @@ services:
       AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
       AIRFLOW__CORE__PLUGINS_FOLDER: /home/airflow/plugins
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-airflow}
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-airflow}
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
       AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-belly}
       REDIS_URL: redis://redis:6379/0
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      PYTHONPATH: /home/airflow
     volumes:
-      - ./belly/airflow/dags:/home/airflow/dags
-      - ./belly/airflow/plugins:/home/airflow/plugins
-      - ./belly:/home/airflow/belly
+      - ./dags:/home/airflow/dags
+      - ./plugins:/home/airflow/plugins
+      - ../../belly:/home/airflow/belly
       - airflow_logs:/home/airflow/logs
     depends_on:
       postgres:

@@ -12,7 +12,7 @@ Tasks:
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.operators.dummy import DummyOperator
+from airflow.operators.empty import EmptyOperator
 import logging
 import asyncio
 import sys
@@ -21,9 +21,18 @@ import os
 logger = logging.getLogger(__name__)
 
 # Add parent directory to path for imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, project_root)
 
-from zebra.services.db_service import DatabaseService
+# Load environment variables
+from dotenv import load_dotenv
+env_path = os.path.join(project_root, '..', '.env')
+if os.path.exists(env_path):
+    load_dotenv(env_path)
+else:
+    logger.warning(f"⚠️ .env file not found at {env_path}")
+
+from belly.zebra.services.db_service import DatabaseService
 
 # Initialize database service
 db_service = DatabaseService()
@@ -236,7 +245,7 @@ def notify_completion(**context):
 
 
 # Define tasks
-start = DummyOperator(task_id='start', dag=dag)
+start = EmptyOperator(task_id='start', dag=dag)
 
 check_data = PythonOperator(
     task_id='check_price_data',
@@ -273,7 +282,7 @@ notify = PythonOperator(
     dag=dag
 )
 
-end = DummyOperator(task_id='end', dag=dag)
+end = EmptyOperator(task_id='end', dag=dag)
 
 # Define dependencies
 start >> check_data
