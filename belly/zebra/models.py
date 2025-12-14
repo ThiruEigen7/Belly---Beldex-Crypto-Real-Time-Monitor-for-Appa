@@ -7,7 +7,6 @@ from datetime import datetime
 from typing import Optional, List
 from decimal import Decimal
 
-
 # ==================== Price Models ====================
 
 class PriceBase(BaseModel):
@@ -136,6 +135,49 @@ class AnalyticsReport(BaseModel):
 
 
 # ==================== API Response Models ====================
+
+class CurrentPriceResponse(BaseModel):
+    """Current price API response."""
+    price_inr: float
+    price_usd: float
+    timestamp: str
+    source: Optional[str] = "api"
+
+
+class HistoryResponse(BaseModel):
+    """Price history API response."""
+    days: int
+    data: List[dict]
+    count: int
+
+
+class StatsResponse(BaseModel):
+    """Market stats API response."""
+    period: str
+    high: float
+    low: float
+    average: float
+    volatility: float
+    computed_at: str
+
+
+class PredictionResponse(BaseModel):
+    """Price prediction API response."""
+    prediction_24h: float
+    prediction_7d: float
+    trend: str
+    confidence: float
+    model_used: str
+    generated_at: str
+
+
+class HealthResponse(BaseModel):
+    """Health check API response."""
+    status: str
+    message: str
+    timestamp: str
+    services: Optional[dict] = None
+
 
 class ApiResponse(BaseModel):
     """Standard API response model."""

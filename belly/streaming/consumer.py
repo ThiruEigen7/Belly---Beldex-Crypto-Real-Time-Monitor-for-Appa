@@ -21,12 +21,13 @@ from kafka.errors import KafkaError
 from dotenv import load_dotenv
 import sys
 
-# Load environment variables
-load_dotenv()
-
 # Add project root to path for imports
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, project_root)
+
+# Load environment variables from .env.production (project root)
+env_path = os.path.join(project_root, '.env.production')
+load_dotenv(env_path)
 
 try:
     from belly.zebra.services.redis_service import RedisService

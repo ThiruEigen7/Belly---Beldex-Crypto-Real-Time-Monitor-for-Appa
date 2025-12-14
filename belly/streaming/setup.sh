@@ -7,9 +7,9 @@ echo "=================================================="
 echo ""
 
 # Check if .env exists
-if [ ! -f ".env" ]; then
-    echo "❌ Error: .env file not found"
-    echo "Please create .env file with required configuration"
+if [ ! -f ".env.production" ]; then
+    echo "❌ Error: .env.production file not found"
+    echo "Please create .env.production file with required configuration"
     exit 1
 fi
 

@@ -9,15 +9,27 @@ from datetime import datetime, timedelta
 from typing import Optional
 import logging
 
-from .models import (
-    CurrentPriceResponse,
-    HistoryResponse,
-    StatsResponse,
-    PredictionResponse,
-    HealthResponse
-)
-from .services.redis_service import RedisService
-from .services.db_service import DatabaseService
+try:
+    from .models import (
+        CurrentPriceResponse,
+        HistoryResponse,
+        StatsResponse,
+        PredictionResponse,
+        HealthResponse
+    )
+    from .services.redis_service import RedisService
+    from .services.db_service import DatabaseService
+except ImportError:
+    # Fallback for direct execution
+    from models import (
+        CurrentPriceResponse,
+        HistoryResponse,
+        StatsResponse,
+        PredictionResponse,
+        HealthResponse
+    )
+    from services.redis_service import RedisService
+    from services.db_service import DatabaseService
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -233,11 +245,15 @@ async def get_predictions():
 # Additional utility endpoints
 
 @app.get("/latest/{count}")
-async def get_latest_prices(count: int = Query(default=10, ge=1, le=100)):
+async def get_latest_prices(count: int):
     """Get the latest N price entries."""
     try:
+        if count < 1 or count > 100:
+            raise HTTPException(status_code=400, detail="Count must be between 1 and 100")
         prices = await db_service.get_latest_prices(count)
         return {"count": len(prices), "data": prices}
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"❌ Error fetching latest prices: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))

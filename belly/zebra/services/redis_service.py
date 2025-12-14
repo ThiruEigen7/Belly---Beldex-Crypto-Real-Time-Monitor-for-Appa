@@ -8,6 +8,10 @@ import logging
 from typing import Optional, Dict, Any, List
 from datetime import datetime, timedelta
 import asyncio
+from dotenv import load_dotenv
+
+# Load .env.production
+load_dotenv('.env.production')
 
 from upstash_redis import Redis
 
@@ -33,11 +37,20 @@ class RedisService:
         self.redis_token = os.getenv("REDIS_TOKEN")
 
         if not self.redis_url or not self.redis_token:
-            raise ValueError("REDIS_URL and REDIS_TOKEN must be set in the environment variables.")
+            logger.warning("⚠️ REDIS_URL or REDIS_TOKEN not set - Redis caching disabled")
+            self.client = None
+            self.connected = False
+        else:
+            try:
+                self.client = Redis(url=self.redis_url, token=self.redis_token)
+                self.connected = True  # upstash-redis handles connection internally
+                logger.info("✅ Redis connection configured")
+            except Exception as e:
+                logger.error(f"❌ Redis connection failed: {e}")
+                self.client = None
+                self.connected = False
 
-        self.client = Redis(url=self.redis_url, token=self.redis_token)
         self.key_prefix = "belly:"
-        self.connected = True  # upstash-redis handles connection internally
 
         # TTL defaults (in seconds)
         self.ttl_current_price = 900  # 15 minutes
@@ -112,7 +125,7 @@ class RedisService:
             Value as string or None if error/not found
         """
         try:
-            return await self.client.get(key)
+            return self.client.get(key)
         except Exception as e:
             logger.error(f"❌ Redis GET error for key '{key}': {str(e)}")
             return None
@@ -136,7 +149,7 @@ class RedisService:
         """
         try:
             if ttl:
-                self.client.set(key, value, ex=ttl)
+                self.client.setex(key, ttl, value)
             else:
                 self.client.set(key, value)
             return True
@@ -418,10 +431,10 @@ class RedisService:
         """
         try:
             full_pattern = f"{self.key_prefix}{pattern}"
-            keys = await self.client.keys(full_pattern)
+            keys = self.client.keys(full_pattern)
             
             if keys:
-                count = await self.client.delete(*keys)
+                count = self.client.delete(*keys)
                 logger.info(f"✅ Cleared {count} keys matching '{full_pattern}'")
                 return count
             
@@ -444,7 +457,7 @@ class RedisService:
         
         try:
             pattern = f"{self.key_prefix}*"
-            keys = await self.client.keys(pattern)
+            keys = self.client.keys(pattern)
             logger.info(f"✅ Found {len(keys)} keys in Redis")
             return keys
         except Exception as e:
@@ -466,7 +479,7 @@ class RedisService:
         
         try:
             full_key = f"{self.key_prefix}{key}"
-            ttl = await self.client.ttl(full_key)
+            ttl = self.client.ttl(full_key)
             return ttl
         except Exception as e:
             logger.error(f"❌ Error getting TTL: {str(e)}")
@@ -543,7 +556,7 @@ class RedisService:
                 }
             
             # Get info
-            info = await self.client.info()
+            info = self.client.info()
             
             # Count keys
             keys = await self.get_all_keys()

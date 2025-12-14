@@ -13,3 +13,18 @@
 [2025-12-14T04:54:31.547+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=price_prediction_nightly, task_id=evaluate_predictions, execution_date=20251212T220000, start_date=20251214T045431, end_date=20251214T045431
 [2025-12-14T04:54:31.599+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
 [2025-12-14T04:54:31.678+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-14T13:16:09.492+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: price_prediction_nightly.evaluate_predictions scheduled__2025-12-12T22:00:00+00:00 [queued]>
+[2025-12-14T13:16:09.499+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: price_prediction_nightly.evaluate_predictions scheduled__2025-12-12T22:00:00+00:00 [queued]>
+[2025-12-14T13:16:09.499+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-14T13:16:09.512+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): evaluate_predictions> on 2025-12-12 22:00:00+00:00
+[2025-12-14T13:16:09.516+0000] {standard_task_runner.py:57} INFO - Started process 72 to run task
+[2025-12-14T13:16:09.519+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'price_prediction_nightly', 'evaluate_predictions', 'scheduled__2025-12-12T22:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/prediction_dag.py', '--cfg-path', '/tmp/tmp1purxu_p']
+[2025-12-14T13:16:09.520+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask evaluate_predictions
+[2025-12-14T13:16:09.645+0000] {task_command.py:416} INFO - Running <TaskInstance: price_prediction_nightly.evaluate_predictions scheduled__2025-12-12T22:00:00+00:00 [running]> on host d3dadd96ebe1
+[2025-12-14T13:16:09.682+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@belly.local' AIRFLOW_CTX_DAG_OWNER='belly-team' AIRFLOW_CTX_DAG_ID='price_prediction_nightly' AIRFLOW_CTX_TASK_ID='evaluate_predictions' AIRFLOW_CTX_EXECUTION_DATE='2025-12-12T22:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-12T22:00:00+00:00'
+[2025-12-14T13:16:09.683+0000] {prediction_dag.py:208} INFO - 📊 Evaluating prediction accuracy...
+[2025-12-14T13:16:09.687+0000] {prediction_dag.py:213} INFO - ✅ Evaluation completed for predictions: None
+[2025-12-14T13:16:09.694+0000] {python.py:194} INFO - Done. Returned value was: {'status': 'success'}
+[2025-12-14T13:16:09.703+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=price_prediction_nightly, task_id=evaluate_predictions, execution_date=20251212T220000, start_date=20251214T131609, end_date=20251214T131609
+[2025-12-14T13:16:09.731+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-14T13:16:09.824+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

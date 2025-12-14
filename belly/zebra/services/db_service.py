@@ -7,6 +7,10 @@ import logging
 from typing import Optional, List, Dict, Any
 from datetime import datetime, timedelta
 import httpx
+from dotenv import load_dotenv
+
+# Load .env.production
+load_dotenv('.env.production')
 
 logger = logging.getLogger(__name__)
 

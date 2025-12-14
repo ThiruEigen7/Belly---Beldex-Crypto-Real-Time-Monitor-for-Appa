@@ -42,12 +42,17 @@ class State(rx.State):
     async def load_current_price(self):
         """Fetch current price from FastAPI."""
         try:
-            # TODO: Replace with actual API call using httpx
-            # For now, mock data
-            self.current_price_inr = 35.50
-            self.current_price_usd = 0.43
-            self.last_updated = "2 mins ago"
-            self.is_loading = False
+            import httpx
+            async with httpx.AsyncClient() as client:
+                response = await client.get(f"{self.api_base_url}/current-price")
+                if response.status_code == 200:
+                    data = response.json()
+                    self.current_price_inr = data["price_inr"]
+                    self.current_price_usd = data["price_usd"]
+                    self.last_updated = "Just now"
+                    self.is_loading = False
+                else:
+                    raise Exception(f"API returned status {response.status_code}")
         except Exception as e:
             self.error_message = f"Error loading price: {str(e)}"
             self.is_loading = False
@@ -55,44 +60,59 @@ class State(rx.State):
     async def load_history(self):
         """Fetch 5-day price history."""
         try:
-            # TODO: Replace with actual API call
-            # Mock data for chart
-            self.historical_data = [
-                {"date": "Dec 1", "price": 34.20},
-                {"date": "Dec 2", "price": 35.10},
-                {"date": "Dec 3", "price": 34.80},
-                {"date": "Dec 4", "price": 35.40},
-                {"date": "Dec 5", "price": 35.50},
-            ]
+            import httpx
+            async with httpx.AsyncClient() as client:
+                response = await client.get(f"{self.api_base_url}/history?days=7")
+                if response.status_code == 200:
+                    data = response.json()
+                    self.historical_data = data["data"]
+                else:
+                    raise Exception(f"API returned status {response.status_code}")
         except Exception as e:
             self.error_message = f"Error loading history: {str(e)}"
     
     async def load_stats(self):
         """Fetch market statistics."""
         try:
-            # TODO: Replace with actual API call
-            self.high_24h = 36.00
-            self.low_24h = 34.50
-            self.avg_24h = 35.25
-            self.volatility = 2.3
+            import httpx
+            async with httpx.AsyncClient() as client:
+                response = await client.get(f"{self.api_base_url}/stats?period=7d")
+                if response.status_code == 200:
+                    data = response.json()
+                    self.high_24h = data["high"]
+                    self.low_24h = data["low"]
+                    self.avg_24h = data["average"]
+                    self.volatility = data["volatility"]
+                else:
+                    raise Exception(f"API returned status {response.status_code}")
         except Exception as e:
             self.error_message = f"Error loading stats: {str(e)}"
     
     async def load_predictions(self):
         """Fetch price predictions."""
         try:
-            # TODO: Replace with actual API call
-            self.prediction_24h = 36.20
-            self.prediction_7d = 37.50
-            self.prediction_trend = "bullish"
-            # New: Mock 5-day predictions
-            self.prediction_5d = [
-                {"date": "Dec 6", "price": 36.20},
-                {"date": "Dec 7", "price": 36.80},
-                {"date": "Dec 8", "price": 37.10},
-                {"date": "Dec 9", "price": 37.30},
-                {"date": "Dec 10", "price": 37.50},
-            ]
+            import httpx
+            from datetime import datetime, timedelta
+            async with httpx.AsyncClient() as client:
+                response = await client.get(f"{self.api_base_url}/predict")
+                if response.status_code == 200:
+                    data = response.json()
+                    self.prediction_24h = data["prediction_24h"]
+                    self.prediction_7d = data["prediction_7d"]
+                    self.prediction_trend = data["trend"]
+                    
+                    # Generate 5-day prediction spread
+                    current = self.current_price_inr
+                    target = self.prediction_7d
+                    daily_change = (target - current) / 7
+                    
+                    self.prediction_5d = []
+                    for i in range(1, 6):
+                        date = (datetime.now() + timedelta(days=i)).strftime("%b %d")
+                        price = round(current + (daily_change * i), 2)
+                        self.prediction_5d.append({"date": date, "price": price})
+                else:
+                    raise Exception(f"API returned status {response.status_code}")
         except Exception as e:
             self.error_message = f"Error loading predictions: {str(e)}"
     
