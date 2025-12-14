@@ -2468,3 +2468,113 @@
 [2025-12-14T14:01:57.277+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:57.277+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
 [2025-12-14T14:01:57.279+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
 [2025-12-14T14:01:57.287+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.015 seconds
+[2025-12-14T14:02:27.623+0000] {processor.py:157} INFO - Started process (PID=393) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:02:27.629+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:02:27.630+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:02:27.630+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:02:27.632+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:02:27.641+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.021 seconds
+[2025-12-14T14:02:58.030+0000] {processor.py:157} INFO - Started process (PID=396) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:02:58.031+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:02:58.032+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:02:58.032+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:02:58.038+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:02:58.058+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.035 seconds
+[2025-12-14T14:03:28.391+0000] {processor.py:157} INFO - Started process (PID=399) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:03:28.397+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:03:28.398+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:03:28.398+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:03:28.400+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:03:28.408+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.019 seconds
+[2025-12-14T14:03:58.753+0000] {processor.py:157} INFO - Started process (PID=402) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:03:58.754+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:03:58.756+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:03:58.755+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:03:58.760+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:03:58.771+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.021 seconds
+[2025-12-14T14:04:29.162+0000] {processor.py:157} INFO - Started process (PID=405) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:04:29.168+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:04:29.170+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:04:29.169+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:04:29.172+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:04:29.185+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.029 seconds
+[2025-12-14T14:04:59.558+0000] {processor.py:157} INFO - Started process (PID=408) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:04:59.559+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:04:59.560+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:04:59.560+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:04:59.562+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:04:59.574+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.021 seconds
+[2025-12-14T14:05:29.961+0000] {processor.py:157} INFO - Started process (PID=411) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:05:29.962+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:05:29.963+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:05:29.963+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:05:29.965+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:05:29.979+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.021 seconds
+[2025-12-14T14:06:00.385+0000] {processor.py:157} INFO - Started process (PID=414) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:06:00.386+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:06:00.387+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:06:00.386+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:06:00.389+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:06:00.396+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.013 seconds
+[2025-12-14T14:06:30.740+0000] {processor.py:157} INFO - Started process (PID=417) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:06:30.746+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:06:30.747+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:06:30.747+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:06:30.749+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:06:30.756+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.019 seconds
+[2025-12-14T14:07:01.079+0000] {processor.py:157} INFO - Started process (PID=420) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:07:01.080+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:07:01.081+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:07:01.080+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:07:01.084+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:07:01.094+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.017 seconds
+[2025-12-14T14:07:31.459+0000] {processor.py:157} INFO - Started process (PID=423) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:07:31.465+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:07:31.467+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:07:31.466+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:07:31.469+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:07:31.480+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.023 seconds
+[2025-12-14T14:08:01.786+0000] {processor.py:157} INFO - Started process (PID=426) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:08:01.787+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:08:01.787+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:08:01.787+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:08:01.789+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:08:01.794+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.009 seconds
+[2025-12-14T14:08:32.081+0000] {processor.py:157} INFO - Started process (PID=429) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:08:32.087+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:08:32.088+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:08:32.087+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:08:32.089+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:08:32.095+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.015 seconds
+[2025-12-14T14:09:02.374+0000] {processor.py:157} INFO - Started process (PID=432) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:09:02.374+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:09:02.375+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:09:02.374+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:09:02.376+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:09:02.381+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.009 seconds
+[2025-12-14T14:09:32.687+0000] {processor.py:157} INFO - Started process (PID=435) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:09:32.695+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:09:32.696+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:09:32.696+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:09:32.697+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:09:32.703+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.017 seconds
+[2025-12-14T14:10:03.024+0000] {processor.py:157} INFO - Started process (PID=438) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:10:03.025+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:10:03.025+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:10:03.025+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:10:03.027+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:10:03.034+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.012 seconds
+[2025-12-14T14:10:33.320+0000] {processor.py:157} INFO - Started process (PID=441) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:10:33.326+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:10:33.326+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:10:33.326+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:10:33.327+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:10:33.334+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.015 seconds
+[2025-12-14T14:11:03.622+0000] {processor.py:157} INFO - Started process (PID=444) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:11:03.623+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:11:03.623+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:11:03.623+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:11:03.624+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:11:03.631+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.011 seconds
+[2025-12-14T14:11:33.889+0000] {processor.py:157} INFO - Started process (PID=447) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:11:33.895+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:11:33.896+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:11:33.895+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:11:33.897+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:11:33.904+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.016 seconds
+[2025-12-14T14:12:04.162+0000] {processor.py:157} INFO - Started process (PID=450) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:12:04.163+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:12:04.166+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:12:04.166+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:12:04.168+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:12:04.173+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.013 seconds
+[2025-12-14T14:12:34.456+0000] {processor.py:157} INFO - Started process (PID=453) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:12:34.462+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:12:34.463+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:12:34.463+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:12:34.464+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:12:34.470+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.015 seconds
+[2025-12-14T14:13:04.775+0000] {processor.py:157} INFO - Started process (PID=456) to work on /home/airflow/dags/__init__.py
+[2025-12-14T14:13:04.777+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/__init__.py for tasks to queue
+[2025-12-14T14:13:04.778+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:13:04.777+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/__init__.py
+[2025-12-14T14:13:04.779+0000] {processor.py:841} WARNING - No viable dags retrieved from /home/airflow/dags/__init__.py
+[2025-12-14T14:13:04.785+0000] {processor.py:179} INFO - Processing /home/airflow/dags/__init__.py took 0.015 seconds

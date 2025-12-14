@@ -117,7 +117,7 @@ class State(rx.State):
             self.error_message = f"Error loading predictions: {str(e)}"
     
     async def load_all_data(self):
-        """Load all data from API."""
+        """Load all data from API and update display."""
         self.is_loading = True
         self.error_message = ""
         
@@ -128,6 +128,9 @@ class State(rx.State):
         
         # Update calculator
         self.calculate_value()
+        
+        # Finish loading
+        self.is_loading = False
     
     def calculate_value(self):
         """Calculate total value based on quantity."""
@@ -363,11 +366,23 @@ def header() -> rx.Component:
         ),
         rx.spacer(),
         rx.button(
-            rx.icon("refresh-cw", size=18),
-            "Refresh",
+            rx.cond(
+                State.is_loading,
+                rx.hstack(
+                    rx.icon("loader-circle", class_name="animate-spin", size=18),
+                    "Loading...",
+                    spacing="2",
+                ),
+                rx.hstack(
+                    rx.icon("refresh-cw", size=18),
+                    "Refresh",
+                    spacing="2",
+                ),
+            ),
             on_click=State.load_all_data,
             variant="soft",
             size="3",
+            disabled=State.is_loading,
         ),
         width="100%",
         align="center",
@@ -456,7 +471,7 @@ def index() -> rx.Component:
                 State.error_message != "",
                 rx.callout(
                     State.error_message,
-                    icon="alert-circle",
+                    icon="circle_alert",
                     color_scheme="red",
                     size="2",
                 ),
@@ -470,14 +485,26 @@ def index() -> rx.Component:
     )
 
 
-# Create the app
+# Create the app with custom styles
 app = rx.App(
     theme=rx.theme(
         appearance="dark",
         has_background=True,
         radius="large",
         accent_color="green",
-    )
+    ),
+    stylesheets=[
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+    ],
+    style={
+        ".animate-spin": {
+            "animation": "spin 1s linear infinite",
+        },
+        "@keyframes spin": {
+            "from": {"transform": "rotate(0deg)"},
+            "to": {"transform": "rotate(360deg)"},
+        },
+    }
 )
 
 app.add_page(index, title="BELLY - Beldex Monitor")
