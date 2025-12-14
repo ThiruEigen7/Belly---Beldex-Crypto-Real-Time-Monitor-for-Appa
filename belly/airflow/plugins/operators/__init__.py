@@ -1,7 +1,7 @@
 """
 Custom operators for Belly Airflow DAGs.
 """
-from .stats_operator import StatsOperator
-from .prediction_operator import PredictionOperator
+# Don't import here - let Airflow load them directly
+# Relative imports don't work when plugins are loaded as modules
 
 __all__ = ["StatsOperator", "PredictionOperator"]

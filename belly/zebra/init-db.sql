@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS price_history (
 
 -- Create indexes for efficient querying
 CREATE INDEX idx_price_history_timestamp ON price_history(timestamp DESC);
-CREATE INDEX idx_price_history_date ON price_history(DATE(timestamp));
 CREATE INDEX idx_price_history_created_at ON price_history(created_at DESC);
 
 -- ============================================
@@ -35,8 +34,7 @@ CREATE TABLE IF NOT EXISTS stats (
     change_percent NUMERIC(6, 2), -- price change %
     timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    UNIQUE(period, DATE(timestamp))
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
 -- Create indexes

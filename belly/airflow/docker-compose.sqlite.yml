@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # Redis for caching (optional, can use in-memory)
+  redis:
+    image: redis:7-alpine
+    container_name: belly-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - belly-network
+
+  # Airflow Scheduler
+  airflow-scheduler:
+    build:
+      context: ../..
+      dockerfile: belly/airflow/Dockerfile.airflow.nodumb
+    container_name: belly-airflow-scheduler
+    environment:
+      AIRFLOW_HOME: /home/airflow
+      AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
+      AIRFLOW__CORE__PLUGINS_FOLDER: /home/airflow/plugins
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: sqlite:////home/airflow/airflow.db
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////home/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
+      AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS: 'false'
+      REDIS_URL: redis://redis:6379/0
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      PYTHONPATH: /home/airflow
+    volumes:
+      - ./dags:/home/airflow/dags
+      - ./plugins:/home/airflow/plugins
+      - ../../belly:/home/airflow/belly
+      - ./logs:/home/airflow/logs
+      - ./start-scheduler.sh:/start-scheduler.sh
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: /start-scheduler.sh
+    networks:
+      - belly-network
+
+  # Airflow Webserver
+  airflow-webserver:
+    build:
+      context: ../..
+      dockerfile: belly/airflow/Dockerfile.airflow.nodumb
+    container_name: belly-airflow-webserver
+    environment:
+      AIRFLOW_HOME: /home/airflow
+      AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
+      AIRFLOW__CORE__PLUGINS_FOLDER: /home/airflow/plugins
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: sqlite:////home/airflow/airflow.db
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////home/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__WEBSERVER__RBAC: 'true'
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
+      AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS: 'false'
+      REDIS_URL: redis://redis:6379/0
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      PYTHONPATH: /home/airflow
+    volumes:
+      - ./dags:/home/airflow/dags
+      - ./plugins:/home/airflow/plugins
+      - ../../belly:/home/airflow/belly
+      - ./logs:/home/airflow/logs
+      - ./start-webserver.sh:/start-webserver.sh
+    ports:
+      - "8080:8080"
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: /start-webserver.sh
+    networks:
+      - belly-network
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  belly-network:
+    driver: bridge

@@ -1,0 +1,1095 @@
+[2025-12-14T04:44:15.649+0000] {manager.py:487} INFO - Processing files using up to 1 processes at a time 
+[2025-12-14T04:44:15.649+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-12-14T04:44:15.650+0000] {manager.py:489} INFO - Checking for new files in /home/airflow/dags every 300 seconds
+[2025-12-14T04:44:15.650+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T04:44:15.656+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T04:44:15.844+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:44:15
+/home/airflow/dags/stats_dag.py                                0           0
+/home/airflow/dags/__init__.py                                 0           0
+================================================================================
+[2025-12-14T04:44:45.972+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.10s           2025-12-14T04:44:45
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:44:17
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:44:18
+================================================================================
+[2025-12-14T04:45:16.313+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:45:16
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:44:48
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:44:49
+================================================================================
+[2025-12-14T04:45:46.665+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:45:46
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:45:18
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:45:19
+================================================================================
+[2025-12-14T04:46:17.030+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.10s           2025-12-14T04:46:17
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:45:48
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:45:49
+================================================================================
+[2025-12-14T04:46:47.259+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:46:47
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:46:19
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:46:20
+================================================================================
+[2025-12-14T04:46:53.262+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-12-14T04:47:13.124+0000] {manager.py:487} INFO - Processing files using up to 1 processes at a time 
+[2025-12-14T04:47:13.124+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-12-14T04:47:13.125+0000] {manager.py:489} INFO - Checking for new files in /home/airflow/dags every 300 seconds
+[2025-12-14T04:47:13.125+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T04:47:13.129+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T04:47:13.309+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:47:13
+/home/airflow/dags/stats_dag.py                                0           0
+/home/airflow/dags/__init__.py                                 0           0
+================================================================================
+[2025-12-14T04:47:44.446+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.10s           2025-12-14T04:47:44
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:47:14
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:47:15
+================================================================================
+[2025-12-14T04:48:14.684+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:48:14
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:47:45
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:47:46
+================================================================================
+[2025-12-14T04:48:44.918+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:48:44
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:48:15
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:48:16
+================================================================================
+[2025-12-14T04:49:15.169+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:49:15
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:48:46
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:48:47
+================================================================================
+[2025-12-14T04:49:45.393+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:49:45
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:49:16
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:49:17
+================================================================================
+[2025-12-14T04:50:15.616+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.10s           2025-12-14T04:50:15
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:49:46
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:49:47
+================================================================================
+[2025-12-14T04:50:45.833+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.10s           2025-12-14T04:50:45
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:50:16
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:50:17
+================================================================================
+[2025-12-14T04:51:16.072+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:51:16
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:50:46
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:50:48
+================================================================================
+[2025-12-14T04:51:46.283+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.10s           2025-12-14T04:51:46
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:51:17
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:51:18
+================================================================================
+[2025-12-14T04:52:13.141+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T04:52:13.142+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T04:52:16.494+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:52:16
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:51:47
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:51:48
+================================================================================
+[2025-12-14T04:52:46.711+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:52:46
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:52:17
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:52:18
+================================================================================
+[2025-12-14T04:53:16.929+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:53:16
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:52:47
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:52:48
+================================================================================
+[2025-12-14T04:53:47.177+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/prediction_dag.py                           0           1  0.11s           2025-12-14T04:53:47
+/home/airflow/dags/stats_dag.py                                0           1  0.10s           2025-12-14T04:53:18
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:53:19
+================================================================================
+[2025-12-14T04:54:17.844+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/stats_dag.py                                0           1  0.11s           2025-12-14T04:53:48
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:53:49
+/home/airflow/dags/prediction_dag.py                           1           0  0.51s           2025-12-14T04:54:17
+================================================================================
+[2025-12-14T04:54:48.144+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:54:22
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T04:54:48
+/home/airflow/dags/stats_dag.py                                1           0  0.41s           2025-12-14T04:54:19
+================================================================================
+[2025-12-14T04:54:57.489+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-12-14T04:55:11.581+0000] {manager.py:487} INFO - Processing files using up to 1 processes at a time 
+[2025-12-14T04:55:11.581+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-12-14T04:55:11.581+0000] {manager.py:489} INFO - Checking for new files in /home/airflow/dags every 300 seconds
+[2025-12-14T04:55:11.581+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T04:55:11.583+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T04:55:11.854+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/stats_dag.py                                0           0
+/home/airflow/dags/__init__.py                                 0           0
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T04:55:11
+================================================================================
+[2025-12-14T04:55:42.151+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:55:14
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T04:55:42
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T04:55:13
+================================================================================
+[2025-12-14T04:56:12.921+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:55:44
+/home/airflow/dags/prediction_dag.py                           1           0  0.31s           2025-12-14T04:56:12
+/home/airflow/dags/stats_dag.py                                1           0  0.31s           2025-12-14T04:55:43
+================================================================================
+[2025-12-14T04:56:43.230+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:56:15
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T04:56:43
+/home/airflow/dags/stats_dag.py                                1           0  0.31s           2025-12-14T04:56:14
+================================================================================
+[2025-12-14T04:57:13.866+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T04:56:45
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T04:57:13
+/home/airflow/dags/stats_dag.py                                1           0  0.31s           2025-12-14T04:56:44
+================================================================================
+[2025-12-14T04:57:44.266+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:57:16
+/home/airflow/dags/prediction_dag.py                           1           0  0.12s           2025-12-14T04:57:44
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T04:57:15
+================================================================================
+[2025-12-14T04:58:14.476+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:57:46
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T04:58:14
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T04:57:45
+================================================================================
+[2025-12-14T04:58:44.590+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:58:18
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T04:58:44
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T04:58:15
+================================================================================
+[2025-12-14T04:59:14.704+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:58:48
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T04:59:14
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T04:58:46
+================================================================================
+[2025-12-14T04:59:44.841+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:59:18
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T04:59:44
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T04:59:16
+================================================================================
+[2025-12-14T05:00:11.593+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:00:11.599+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:00:14.950+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T04:59:48
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:00:14
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T04:59:47
+================================================================================
+[2025-12-14T05:00:45.281+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:00:18
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:00:45
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:00:17
+================================================================================
+[2025-12-14T05:01:15.549+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:00:49
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:01:15
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:00:47
+================================================================================
+[2025-12-14T05:01:45.748+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:01:19
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:01:45
+/home/airflow/dags/stats_dag.py                                1           0  0.31s           2025-12-14T05:01:17
+================================================================================
+[2025-12-14T05:02:16.173+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:01:49
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:02:16
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:01:48
+================================================================================
+[2025-12-14T05:02:46.519+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:02:20
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:02:46
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:02:19
+================================================================================
+[2025-12-14T05:03:16.867+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:02:50
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:03:16
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:02:49
+================================================================================
+[2025-12-14T05:03:47.207+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:03:20
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:03:47
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:03:19
+================================================================================
+[2025-12-14T05:04:17.649+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:03:51
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:04:17
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:03:50
+================================================================================
+[2025-12-14T05:04:47.858+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:04:21
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:04:47
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:04:20
+================================================================================
+[2025-12-14T05:05:11.644+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:05:11.645+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:05:18.257+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:04:51
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:05:18
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:04:50
+================================================================================
+[2025-12-14T05:05:48.451+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:05:22
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:05:48
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:05:21
+================================================================================
+[2025-12-14T05:06:18.750+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:05:52
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:06:18
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:05:51
+================================================================================
+[2025-12-14T05:06:49.037+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:06:22
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:06:49
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:06:21
+================================================================================
+[2025-12-14T05:07:19.438+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:06:53
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:07:19
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:06:52
+================================================================================
+[2025-12-14T05:07:49.629+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:07:23
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:07:49
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:07:22
+================================================================================
+[2025-12-14T05:08:20.129+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:07:53
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:08:20
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:07:52
+================================================================================
+[2025-12-14T05:08:50.327+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:08:24
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:08:50
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:08:23
+================================================================================
+[2025-12-14T05:09:20.767+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:08:54
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:09:20
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:08:53
+================================================================================
+[2025-12-14T05:09:51.056+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:09:24
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:09:51
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:09:23
+================================================================================
+[2025-12-14T05:10:11.674+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:10:11.675+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:10:21.444+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:09:54
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:10:21
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:09:54
+================================================================================
+[2025-12-14T05:10:51.712+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:10:24
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:10:51
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:10:24
+================================================================================
+[2025-12-14T05:11:22.005+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:10:55
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:11:22
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:10:54
+================================================================================
+[2025-12-14T05:11:52.295+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:11:25
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:11:52
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:11:24
+================================================================================
+[2025-12-14T05:12:22.690+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:11:55
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:12:22
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:11:55
+================================================================================
+[2025-12-14T05:12:52.983+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:12:26
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:12:52
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:12:25
+================================================================================
+[2025-12-14T05:13:23.175+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:12:56
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:13:23
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:12:55
+================================================================================
+[2025-12-14T05:13:53.444+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:13:27
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:13:53
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:13:26
+================================================================================
+[2025-12-14T05:14:23.732+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:13:57
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:14:23
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:13:56
+================================================================================
+[2025-12-14T05:14:54.924+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:14:27
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:14:54
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:14:26
+================================================================================
+[2025-12-14T05:15:11.708+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:15:11.709+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:15:25.182+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:14:57
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:15:25
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:14:56
+================================================================================
+[2025-12-14T05:15:55.412+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:15:28
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:15:55
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:15:27
+================================================================================
+[2025-12-14T05:16:25.792+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:15:58
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:16:25
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:15:57
+================================================================================
+[2025-12-14T05:16:56.023+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:16:28
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:16:56
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:16:27
+================================================================================
+[2025-12-14T05:17:26.372+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:16:59
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:17:26
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:16:57
+================================================================================
+[2025-12-14T05:17:56.625+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:17:29
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:17:56
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:17:28
+================================================================================
+[2025-12-14T05:18:26.793+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:17:59
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:18:26
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:17:58
+================================================================================
+[2025-12-14T05:18:57.155+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:18:29
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:18:57
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:18:28
+================================================================================
+[2025-12-14T05:19:27.520+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:19:00
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:19:27
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:18:59
+================================================================================
+[2025-12-14T05:19:57.677+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:19:30
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:19:57
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:19:29
+================================================================================
+[2025-12-14T05:20:11.741+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:20:11.742+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:20:28.088+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:20:00
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:20:28
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:19:59
+================================================================================
+[2025-12-14T05:20:58.393+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:20:31
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:20:58
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:20:29
+================================================================================
+[2025-12-14T05:21:28.694+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:21:01
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:21:28
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:21:00
+================================================================================
+[2025-12-14T05:21:58.997+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:21:31
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:21:58
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:21:30
+================================================================================
+[2025-12-14T05:22:29.297+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:22:01
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:22:29
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:22:00
+================================================================================
+[2025-12-14T05:22:59.592+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:22:31
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:22:59
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:22:31
+================================================================================
+[2025-12-14T05:23:29.913+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:23:02
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:23:29
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:23:01
+================================================================================
+[2025-12-14T05:24:00.209+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:23:32
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:24:00
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:23:31
+================================================================================
+[2025-12-14T05:24:30.557+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:24:02
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:24:30
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:24:02
+================================================================================
+[2025-12-14T05:25:00.876+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:24:33
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:25:00
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:24:32
+================================================================================
+[2025-12-14T05:25:11.778+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:25:11.779+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:25:31.138+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:25:03
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:25:31
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:25:02
+================================================================================
+[2025-12-14T05:26:01.521+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:25:34
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:26:01
+/home/airflow/dags/stats_dag.py                                1           0  0.31s           2025-12-14T05:25:33
+================================================================================
+[2025-12-14T05:26:31.793+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:26:04
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:26:31
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:26:03
+================================================================================
+[2025-12-14T05:27:02.229+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:26:34
+/home/airflow/dags/prediction_dag.py                           1           0  0.41s           2025-12-14T05:27:02
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:26:33
+================================================================================
+[2025-12-14T05:27:33.139+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:27:04
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:27:33
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:27:03
+================================================================================
+[2025-12-14T05:28:03.594+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:27:35
+/home/airflow/dags/prediction_dag.py                           1           0  0.31s           2025-12-14T05:28:03
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:27:34
+================================================================================
+[2025-12-14T05:28:34.571+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:28:05
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:28:34
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:28:04
+================================================================================
+[2025-12-14T05:29:05.047+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:28:36
+/home/airflow/dags/prediction_dag.py                           1           0  0.41s           2025-12-14T05:29:05
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:28:35
+================================================================================
+[2025-12-14T05:29:35.318+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:29:07
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:29:35
+/home/airflow/dags/stats_dag.py                                1           0  0.41s           2025-12-14T05:29:06
+================================================================================
+[2025-12-14T05:30:05.691+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:29:38
+/home/airflow/dags/prediction_dag.py                           1           0  0.31s           2025-12-14T05:30:05
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:29:37
+================================================================================
+[2025-12-14T05:30:11.815+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:30:11.818+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:30:36.062+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.11s           2025-12-14T05:30:09
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:30:36
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:30:08
+================================================================================
+[2025-12-14T05:31:06.430+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:30:39
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:31:06
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:30:38
+================================================================================
+[2025-12-14T05:31:36.796+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:31:09
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:31:36
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:31:08
+================================================================================
+[2025-12-14T05:32:07.160+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:31:40
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:32:07
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:31:39
+================================================================================
+[2025-12-14T05:32:37.526+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:32:10
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:32:37
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:32:09
+================================================================================
+[2025-12-14T05:33:07.789+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:32:41
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:33:07
+/home/airflow/dags/stats_dag.py                                1           0  0.41s           2025-12-14T05:32:39
+================================================================================
+[2025-12-14T05:33:38.150+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:33:12
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:33:38
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:33:11
+================================================================================
+[2025-12-14T05:34:08.515+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:33:42
+/home/airflow/dags/prediction_dag.py                           1           0  0.30s           2025-12-14T05:34:08
+/home/airflow/dags/stats_dag.py                                1           0  0.30s           2025-12-14T05:33:41
+================================================================================
+[2025-12-14T05:34:38.929+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:34:12
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:34:38
+/home/airflow/dags/stats_dag.py                                1           0  0.21s           2025-12-14T05:34:11
+================================================================================
+[2025-12-14T05:35:09.095+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:34:43
+/home/airflow/dags/prediction_dag.py                           1           0  0.11s           2025-12-14T05:35:09
+/home/airflow/dags/stats_dag.py                                1           0  0.11s           2025-12-14T05:34:42
+================================================================================
+[2025-12-14T05:35:11.860+0000] {manager.py:755} INFO - Searching for files in /home/airflow/dags
+[2025-12-14T05:35:11.861+0000] {manager.py:758} INFO - There are 3 files in /home/airflow/dags
+[2025-12-14T05:35:39.357+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:35:14
+/home/airflow/dags/prediction_dag.py                           1           0  0.21s           2025-12-14T05:35:39
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:35:12
+================================================================================
+[2025-12-14T05:36:09.623+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:35:44
+/home/airflow/dags/prediction_dag.py                           1           0  0.20s           2025-12-14T05:36:09
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:35:42
+================================================================================
+[2025-12-14T05:36:39.798+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:36:14
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:36:39
+/home/airflow/dags/stats_dag.py                                1           0  0.10s           2025-12-14T05:36:12
+================================================================================
+[2025-12-14T05:37:09.952+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/__init__.py                                 0           0  0.10s           2025-12-14T05:36:45
+/home/airflow/dags/prediction_dag.py                           1           0  0.10s           2025-12-14T05:37:09
+/home/airflow/dags/stats_dag.py                                1           0  0.20s           2025-12-14T05:36:43
+================================================================================

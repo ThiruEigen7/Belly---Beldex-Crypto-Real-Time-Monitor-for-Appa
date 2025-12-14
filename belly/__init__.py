@@ -1,4 +1,3 @@
-# Empty file or import the app
-from .belly import app
-
-__all__ = ["app"]
+# Belly package
+# Note: Importing app here causes circular imports with Airflow DAGs
+# Import app explicitly where needed instead

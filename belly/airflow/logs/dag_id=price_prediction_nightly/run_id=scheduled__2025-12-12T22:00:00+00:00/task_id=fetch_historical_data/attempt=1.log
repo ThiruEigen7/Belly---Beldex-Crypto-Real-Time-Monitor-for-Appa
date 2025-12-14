@@ -1,0 +1,20 @@
+[2025-12-14T04:54:21.816+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: price_prediction_nightly.fetch_historical_data scheduled__2025-12-12T22:00:00+00:00 [queued]>
+[2025-12-14T04:54:21.821+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: price_prediction_nightly.fetch_historical_data scheduled__2025-12-12T22:00:00+00:00 [queued]>
+[2025-12-14T04:54:21.821+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-14T04:54:21.830+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): fetch_historical_data> on 2025-12-12 22:00:00+00:00
+[2025-12-14T04:54:21.833+0000] {standard_task_runner.py:57} INFO - Started process 89 to run task
+[2025-12-14T04:54:21.836+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'price_prediction_nightly', 'fetch_historical_data', 'scheduled__2025-12-12T22:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/prediction_dag.py', '--cfg-path', '/tmp/tmp7jbadabb']
+[2025-12-14T04:54:21.837+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask fetch_historical_data
+[2025-12-14T04:54:21.935+0000] {task_command.py:416} INFO - Running <TaskInstance: price_prediction_nightly.fetch_historical_data scheduled__2025-12-12T22:00:00+00:00 [running]> on host c843fcd90f67
+[2025-12-14T04:54:21.964+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@belly.local' AIRFLOW_CTX_DAG_OWNER='belly-team' AIRFLOW_CTX_DAG_ID='price_prediction_nightly' AIRFLOW_CTX_TASK_ID='fetch_historical_data' AIRFLOW_CTX_EXECUTION_DATE='2025-12-12T22:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-12T22:00:00+00:00'
+[2025-12-14T04:54:21.965+0000] {prediction_dag.py:62} INFO - 📊 Fetching historical price data (30 days)...
+[2025-12-14T04:54:21.965+0000] {db_service.py:49} WARNING - ⚠️ No API key provided - requests may fail
+[2025-12-14T04:54:21.982+0000] {db_service.py:94} ERROR - Ping failed: Request URL is missing an 'http://' or 'https://' protocol.
+[2025-12-14T04:54:21.983+0000] {db_service.py:64} ERROR - ❌ Supabase connection test failed
+[2025-12-14T04:54:21.983+0000] {db_service.py:167} ERROR - Error fetching price history: Request URL is missing an 'http://' or 'https://' protocol.
+[2025-12-14T04:54:22.054+0000] {db_service.py:77} INFO - Supabase REST API client closed
+[2025-12-14T04:54:22.054+0000] {prediction_dag.py:71} WARNING - ⚠️ No historical price data found
+[2025-12-14T04:54:22.060+0000] {python.py:194} INFO - Done. Returned value was: 0
+[2025-12-14T04:54:22.066+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=price_prediction_nightly, task_id=fetch_historical_data, execution_date=20251212T220000, start_date=20251214T045421, end_date=20251214T045422
+[2025-12-14T04:54:22.088+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-14T04:54:22.171+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

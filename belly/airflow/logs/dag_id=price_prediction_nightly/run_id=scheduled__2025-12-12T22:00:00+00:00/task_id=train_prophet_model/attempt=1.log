@@ -1,0 +1,17 @@
+[2025-12-14T04:54:27.429+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: price_prediction_nightly.train_prophet_model scheduled__2025-12-12T22:00:00+00:00 [queued]>
+[2025-12-14T04:54:27.433+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: price_prediction_nightly.train_prophet_model scheduled__2025-12-12T22:00:00+00:00 [queued]>
+[2025-12-14T04:54:27.433+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-14T04:54:27.442+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): train_prophet_model> on 2025-12-12 22:00:00+00:00
+[2025-12-14T04:54:27.446+0000] {standard_task_runner.py:57} INFO - Started process 108 to run task
+[2025-12-14T04:54:27.449+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'price_prediction_nightly', 'train_prophet_model', 'scheduled__2025-12-12T22:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/prediction_dag.py', '--cfg-path', '/tmp/tmp10xxn827']
+[2025-12-14T04:54:27.450+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask train_prophet_model
+[2025-12-14T04:54:27.548+0000] {task_command.py:416} INFO - Running <TaskInstance: price_prediction_nightly.train_prophet_model scheduled__2025-12-12T22:00:00+00:00 [running]> on host c843fcd90f67
+[2025-12-14T04:54:27.585+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@belly.local' AIRFLOW_CTX_DAG_OWNER='belly-team' AIRFLOW_CTX_DAG_ID='price_prediction_nightly' AIRFLOW_CTX_TASK_ID='train_prophet_model' AIRFLOW_CTX_EXECUTION_DATE='2025-12-12T22:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-12T22:00:00+00:00'
+[2025-12-14T04:54:27.585+0000] {prediction_dag.py:88} INFO - 🤖 Training Prophet model...
+[2025-12-14T04:54:28.833+0000] {font_manager.py:1639} INFO - generated new fontManager
+[2025-12-14T04:54:29.048+0000] {plot.py:40} ERROR - Importing plotly failed. Interactive plots will not work.
+[2025-12-14T04:54:29.049+0000] {prediction_dag.py:99} ERROR - ❌ No price data available
+[2025-12-14T04:54:29.049+0000] {python.py:194} INFO - Done. Returned value was: {}
+[2025-12-14T04:54:29.058+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=price_prediction_nightly, task_id=train_prophet_model, execution_date=20251212T220000, start_date=20251214T045427, end_date=20251214T045429
+[2025-12-14T04:54:29.105+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-14T04:54:29.183+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
