@@ -4337,3 +4337,327 @@ ModuleNotFoundError: No module named 'reflex'
 [2025-12-14T13:43:35.436+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:43:35.436+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-12-14T13:43:35.454+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:43:35.454+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
 [2025-12-14T13:43:35.483+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.170 seconds
+[2025-12-14T13:44:05.591+0000] {processor.py:157} INFO - Started process (PID=283) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:44:05.597+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:44:05.598+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:05.598+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:44:05.604+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:05.604+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:44:05.651+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:05.651+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:44:05.658+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:44:05.671+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:05.671+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:44:05.686+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:05.686+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:44:05.703+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.114 seconds
+[2025-12-14T13:44:35.857+0000] {processor.py:157} INFO - Started process (PID=286) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:44:35.858+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:44:35.859+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:35.858+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:44:35.865+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:35.865+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:44:35.913+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:35.913+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:44:35.920+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:44:35.933+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:35.933+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:44:35.948+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:44:35.947+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:44:35.963+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.108 seconds
+[2025-12-14T13:45:06.121+0000] {processor.py:157} INFO - Started process (PID=289) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:45:06.127+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:45:06.128+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:06.128+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:45:06.135+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:06.135+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:45:06.186+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:06.186+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:45:06.197+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:45:06.216+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:06.216+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:45:06.232+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:06.232+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:45:06.246+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.127 seconds
+[2025-12-14T13:45:36.400+0000] {processor.py:157} INFO - Started process (PID=292) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:45:36.401+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:45:36.402+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:36.401+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:45:36.410+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:36.410+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:45:36.482+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:36.482+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:45:36.491+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:45:36.515+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:36.514+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:45:36.535+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:45:36.535+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:45:36.567+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.169 seconds
+[2025-12-14T13:46:06.668+0000] {processor.py:157} INFO - Started process (PID=295) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:46:06.669+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:46:06.670+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:06.669+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:46:06.679+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:06.679+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:46:06.785+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:06.785+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:46:06.800+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:46:06.831+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:06.831+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:46:06.864+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:06.864+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:46:06.896+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.230 seconds
+[2025-12-14T13:46:37.040+0000] {processor.py:157} INFO - Started process (PID=298) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:46:37.041+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:46:37.042+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:37.041+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:46:37.047+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:37.047+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:46:37.088+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:37.088+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:46:37.095+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:46:37.108+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:37.108+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:46:37.122+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:46:37.122+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:46:37.139+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.100 seconds
+[2025-12-14T13:47:07.321+0000] {processor.py:157} INFO - Started process (PID=301) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:47:07.327+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:47:07.328+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:07.328+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:47:07.339+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:07.339+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:47:07.408+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:07.408+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:47:07.422+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:47:07.444+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:07.443+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:47:07.465+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:07.465+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:47:07.495+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.179 seconds
+[2025-12-14T13:47:37.597+0000] {processor.py:157} INFO - Started process (PID=304) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:47:37.598+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:47:37.600+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:37.599+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:47:37.609+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:37.609+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:47:37.687+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:37.687+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:47:37.705+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:47:37.748+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:37.747+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:47:37.792+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:47:37.792+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:47:37.842+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.247 seconds
+[2025-12-14T13:48:08.005+0000] {processor.py:157} INFO - Started process (PID=307) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:48:08.011+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:48:08.013+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:08.012+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:48:08.022+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:08.022+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:48:08.094+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:08.093+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:48:08.105+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:48:08.132+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:08.132+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:48:08.155+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:08.155+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:48:08.188+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.185 seconds
+[2025-12-14T13:48:38.308+0000] {processor.py:157} INFO - Started process (PID=310) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:48:38.309+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:48:38.310+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:38.310+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:48:38.321+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:38.321+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:48:38.399+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:38.399+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:48:38.413+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:48:38.438+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:38.438+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:48:38.462+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:48:38.461+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:48:38.491+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.186 seconds
+[2025-12-14T13:49:08.584+0000] {processor.py:157} INFO - Started process (PID=313) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:49:08.590+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:49:08.591+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:08.590+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:49:08.597+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:08.597+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:49:08.646+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:08.646+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:49:08.653+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:49:08.667+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:08.667+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:49:08.683+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:08.683+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:49:08.699+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.117 seconds
+[2025-12-14T13:49:38.838+0000] {processor.py:157} INFO - Started process (PID=316) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:49:38.838+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:49:38.839+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:38.839+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:49:38.845+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:38.845+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:49:38.890+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:38.890+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:49:38.897+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:49:38.910+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:38.910+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:49:38.925+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:49:38.925+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:49:38.940+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.104 seconds
+[2025-12-14T13:50:09.110+0000] {processor.py:157} INFO - Started process (PID=319) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:50:09.115+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:50:09.116+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:09.116+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:50:09.121+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:09.121+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:50:09.163+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:09.163+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:50:09.171+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:50:09.185+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:09.185+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:50:09.201+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:09.200+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:50:09.222+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.114 seconds
+[2025-12-14T13:50:39.382+0000] {processor.py:157} INFO - Started process (PID=322) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:50:39.382+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:50:39.383+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:39.383+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:50:39.391+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:39.391+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:50:39.448+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:39.448+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:50:39.457+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:50:39.472+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:39.472+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:50:39.496+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:50:39.496+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:50:39.530+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.151 seconds
+[2025-12-14T13:51:09.661+0000] {processor.py:157} INFO - Started process (PID=325) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:51:09.667+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:51:09.668+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:09.667+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:51:09.673+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:09.673+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:51:09.722+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:09.722+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:51:09.729+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:51:09.744+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:09.744+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:51:09.761+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:09.761+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:51:09.777+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.118 seconds
+[2025-12-14T13:51:39.934+0000] {processor.py:157} INFO - Started process (PID=328) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:51:39.935+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:51:39.936+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:39.935+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:51:39.948+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:39.948+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:51:40.002+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:40.002+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:51:40.013+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:51:40.027+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:40.027+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:51:40.040+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:51:40.040+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:51:40.056+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.126 seconds
+[2025-12-14T13:52:10.203+0000] {processor.py:157} INFO - Started process (PID=331) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:52:10.209+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:52:10.210+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:10.210+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:52:10.218+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:10.217+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:52:10.269+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:10.269+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:52:10.277+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:52:10.294+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:10.294+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:52:10.309+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:10.309+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:52:10.325+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.125 seconds
+[2025-12-14T13:52:40.475+0000] {processor.py:157} INFO - Started process (PID=334) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:52:40.475+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:52:40.476+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:40.475+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:52:40.487+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:40.486+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:52:40.564+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:40.564+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:52:40.576+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:52:40.601+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:40.601+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:52:40.626+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:52:40.625+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:52:40.659+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.187 seconds
+[2025-12-14T13:53:10.763+0000] {processor.py:157} INFO - Started process (PID=337) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:53:10.769+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:53:10.770+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:10.770+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:53:10.780+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:10.780+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:53:10.860+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:10.860+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:53:10.873+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:53:10.900+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:10.900+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:53:10.923+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:10.923+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:53:10.954+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.197 seconds
+[2025-12-14T13:53:41.052+0000] {processor.py:157} INFO - Started process (PID=340) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:53:41.053+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:53:41.053+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:41.053+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:53:41.064+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:41.063+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:53:41.141+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:41.141+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:53:41.154+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:53:41.179+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:41.178+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:53:41.203+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:53:41.203+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:53:41.237+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.188 seconds
+[2025-12-14T13:54:11.331+0000] {processor.py:157} INFO - Started process (PID=343) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:54:11.337+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:54:11.338+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:11.337+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:54:11.344+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:11.344+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:54:11.391+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:11.391+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:54:11.398+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:54:11.413+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:11.412+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:54:11.429+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:11.429+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:54:11.446+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.117 seconds
+[2025-12-14T13:54:41.589+0000] {processor.py:157} INFO - Started process (PID=346) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:54:41.589+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:54:41.590+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:41.590+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:54:41.596+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:41.596+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:54:41.644+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:41.643+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:54:41.651+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:54:41.664+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:41.664+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:54:41.679+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:54:41.679+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:54:41.695+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.108 seconds
+[2025-12-14T13:55:11.848+0000] {processor.py:157} INFO - Started process (PID=349) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:55:11.854+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:55:11.855+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:11.855+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:55:11.861+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:11.861+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:55:11.918+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:11.918+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:55:11.926+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:55:11.944+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:11.944+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:55:11.958+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:11.958+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:55:11.973+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.127 seconds
+[2025-12-14T13:55:42.110+0000] {processor.py:157} INFO - Started process (PID=352) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:55:42.111+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:55:42.111+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:42.111+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:55:42.118+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:42.118+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:55:42.165+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:42.165+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:55:42.172+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:55:42.187+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:42.187+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:55:42.203+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:55:42.203+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:55:42.220+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.112 seconds
+[2025-12-14T13:56:12.371+0000] {processor.py:157} INFO - Started process (PID=355) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:56:12.377+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:56:12.378+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:12.378+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:56:12.384+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:12.384+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:56:12.431+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:12.431+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:56:12.439+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:56:12.456+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:12.456+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:56:12.471+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:12.470+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:56:12.485+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.116 seconds
+[2025-12-14T13:56:42.639+0000] {processor.py:157} INFO - Started process (PID=358) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:56:42.640+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:56:42.641+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:42.641+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:56:42.650+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:42.650+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:56:42.736+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:42.735+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:56:42.749+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:56:42.776+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:42.775+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:56:42.803+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:56:42.803+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:56:42.845+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.211 seconds
+[2025-12-14T13:57:13.017+0000] {processor.py:157} INFO - Started process (PID=361) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:57:13.023+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:57:13.024+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:13.024+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:57:13.035+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:13.035+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:57:13.118+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:13.118+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:57:13.129+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:57:13.157+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:13.157+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:57:13.181+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:13.181+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:57:13.208+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.197 seconds
+[2025-12-14T13:57:43.298+0000] {processor.py:157} INFO - Started process (PID=364) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:57:43.299+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:57:43.300+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:43.300+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:57:43.308+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:43.308+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:57:43.389+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:43.389+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:57:43.402+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:57:43.425+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:43.425+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:57:43.452+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:57:43.451+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:57:43.483+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.190 seconds
+[2025-12-14T13:58:13.571+0000] {processor.py:157} INFO - Started process (PID=367) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:58:13.577+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:58:13.578+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:13.578+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:58:13.584+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:13.584+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:58:13.638+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:13.638+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:58:13.648+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:58:13.667+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:13.667+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:58:13.682+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:13.682+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:58:13.697+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.128 seconds
+[2025-12-14T13:58:43.831+0000] {processor.py:157} INFO - Started process (PID=370) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:58:43.831+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:58:43.832+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:43.832+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:58:43.838+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:43.838+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:58:43.883+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:43.883+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:58:43.891+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:58:43.905+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:43.905+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:58:43.922+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:58:43.922+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:58:43.939+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.111 seconds
+[2025-12-14T13:59:14.098+0000] {processor.py:157} INFO - Started process (PID=373) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:59:14.104+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:59:14.106+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:14.105+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:59:14.115+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:14.114+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:59:14.162+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:14.162+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:59:14.170+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:59:14.188+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:14.188+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:59:14.203+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:14.203+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:59:14.219+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.124 seconds
+[2025-12-14T13:59:44.358+0000] {processor.py:157} INFO - Started process (PID=376) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:59:44.358+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T13:59:44.359+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:44.358+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:59:44.365+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:44.365+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T13:59:44.411+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:44.411+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T13:59:44.418+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T13:59:44.432+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:44.432+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T13:59:44.447+0000] {logging_mixin.py:154} INFO - [2025-12-14T13:59:44.447+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T13:59:44.464+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.109 seconds
+[2025-12-14T14:00:14.621+0000] {processor.py:157} INFO - Started process (PID=379) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:00:14.627+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T14:00:14.628+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:14.628+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:00:14.635+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:14.634+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T14:00:14.682+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:14.682+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T14:00:14.690+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:00:14.716+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:14.716+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T14:00:14.733+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:14.733+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T14:00:14.749+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.132 seconds
+[2025-12-14T14:00:44.880+0000] {processor.py:157} INFO - Started process (PID=382) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:00:44.881+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T14:00:44.882+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:44.881+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:00:44.887+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:44.887+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T14:00:44.934+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:44.934+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T14:00:44.941+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:00:44.956+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:44.955+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T14:00:44.972+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:00:44.972+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T14:00:44.989+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.111 seconds
+[2025-12-14T14:01:15.140+0000] {processor.py:157} INFO - Started process (PID=385) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:01:15.147+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T14:01:15.148+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:15.148+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:01:15.154+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:15.154+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T14:01:15.200+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:15.200+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T14:01:15.209+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:01:15.223+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:15.223+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T14:01:15.241+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:15.241+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T14:01:15.258+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.121 seconds
+[2025-12-14T14:01:45.402+0000] {processor.py:157} INFO - Started process (PID=388) to work on /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:01:45.408+0000] {processor.py:829} INFO - Processing file /home/airflow/dags/prediction_dag.py for tasks to queue
+[2025-12-14T14:01:45.409+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:45.409+0000] {dagbag.py:536} INFO - Filling up the DagBag from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:01:45.416+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:45.416+0000] {prediction_dag.py:33} WARNING - ⚠️ .env file not found at /home/../.env
+[2025-12-14T14:01:45.472+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:45.472+0000] {db_service.py:35} WARNING - ⚠️ SUPABASE_ANON_KEY not set in environment
+[2025-12-14T14:01:45.480+0000] {processor.py:839} INFO - DAG(s) dict_keys(['price_prediction_nightly']) retrieved from /home/airflow/dags/prediction_dag.py
+[2025-12-14T14:01:45.497+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:45.497+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-14T14:01:45.514+0000] {logging_mixin.py:154} INFO - [2025-12-14T14:01:45.514+0000] {dag.py:3722} INFO - Setting next_dagrun for price_prediction_nightly to 2025-12-13T22:00:00+00:00, run_after=2025-12-14T22:00:00+00:00
+[2025-12-14T14:01:45.818+0000] {processor.py:179} INFO - Processing /home/airflow/dags/prediction_dag.py took 0.418 seconds

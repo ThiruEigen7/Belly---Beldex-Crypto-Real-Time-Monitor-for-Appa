@@ -159,16 +159,26 @@ class BeldexPriceProducer:
                     logger.error(f"❌ {self.beldex_id} not found in API response")
                     return None
                 
+                # Get raw prices from CoinGecko
+                raw_price_inr = data[self.beldex_id].get('inr', 0.0)
+                raw_price_usd = data[self.beldex_id].get('usd', 0.0)
+                
+                # Add 10 paise (₹0.10) to INR price
+                adjusted_price_inr = round(raw_price_inr + 0.10, 2)
+                
+                # Add equivalent USD adjustment (₹0.10 ≈ $0.0012)
+                adjusted_price_usd = round(raw_price_usd + 0.0012, 6)
+                
                 price_data = {
-                    'price_inr': data[self.beldex_id].get('inr', 0.0),
-                    'price_usd': data[self.beldex_id].get('usd', 0.0),
+                    'price_inr': adjusted_price_inr,
+                    'price_usd': adjusted_price_usd,
                     'timestamp': datetime.utcnow().isoformat(),
                     'source': 'coingecko'
                 }
                 
                 logger.info(
-                    f"✅ Fetched price: ₹{price_data['price_inr']} / "
-                    f"${price_data['price_usd']}"
+                    f"✅ Fetched price (CoinGecko: ₹{raw_price_inr} + ₹0.10): "
+                    f"₹{price_data['price_inr']} / ${price_data['price_usd']}"
                 )
                 
                 self.stats['total_fetches'] += 1
