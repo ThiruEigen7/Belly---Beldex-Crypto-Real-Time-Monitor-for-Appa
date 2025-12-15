@@ -1,0 +1,191 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend
+  api:
+    build: .
+    container_name: belly-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - APP_ENV=production
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - REDIS_URL=${REDIS_URL}
+      - REDIS_TOKEN=${REDIS_TOKEN}
+      - KAFKA_BROKERS=${KAFKA_BROKERS}
+      - KAFKA_TOPIC=belly-price
+      - KAFKA_CONSUMER_GROUP=belly-consumers
+      - KAFKA_USERNAME=${KAFKA_USERNAME}
+      - KAFKA_PASSWORD=${KAFKA_PASSWORD}
+    depends_on:
+      - redis
+    volumes:
+      - ./belly:/app/belly
+      - api_logs:/app/logs
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
+  # Reflex Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: belly/Dockerfile.frontend
+    container_name: belly-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_API_URL=http://api:8000
+      - NODE_ENV=production
+    depends_on:
+      - api
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Kafka Producer (Price fetching)
+  producer:
+    build:
+      context: .
+      dockerfile: belly/streaming/Dockerfile.producer
+    container_name: belly-producer
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - KAFKA_BROKERS=${KAFKA_BROKERS}
+      - KAFKA_TOPIC=belly-price
+      - KAFKA_USERNAME=${KAFKA_USERNAME}
+      - KAFKA_PASSWORD=${KAFKA_PASSWORD}
+    depends_on:
+      - api
+    volumes:
+      - ./belly/streaming:/app/belly/streaming
+      - producer_logs:/app/logs
+    restart: always
+
+  # Kafka Consumer (Data ingestion)
+  consumer:
+    build:
+      context: .
+      dockerfile: belly/streaming/Dockerfile.consumer
+    container_name: belly-consumer
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - REDIS_URL=${REDIS_URL}
+      - REDIS_TOKEN=${REDIS_TOKEN}
+      - KAFKA_BROKERS=${KAFKA_BROKERS}
+      - KAFKA_TOPIC=belly-price
+      - KAFKA_CONSUMER_GROUP=belly-consumers
+      - KAFKA_USERNAME=${KAFKA_USERNAME}
+      - KAFKA_PASSWORD=${KAFKA_PASSWORD}
+    depends_on:
+      - api
+      - redis
+    volumes:
+      - ./belly/streaming:/app/belly/streaming
+      - consumer_logs:/app/logs
+    restart: always
+
+  # Redis Cache (if using local Redis)
+  redis:
+    image: redis:7-alpine
+    container_name: belly-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: always
+    command: redis-server --appendonly yes
+
+  # Airflow Scheduler
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: belly/airflow/Dockerfile.airflow.nodumb
+    container_name: belly-airflow-scheduler
+    environment:
+      - PYTHONUNBUFFERED=1
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__UNIT_TEST_MODE=False
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////app/belly/airflow/airflow.db
+      - AIRFLOW__CORE__DAGS_FOLDER=/app/belly/airflow/dags
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+    command: airflow scheduler
+    volumes:
+      - ./belly/airflow:/app/belly/airflow
+      - airflow_logs:/app/belly/airflow/logs
+    restart: always
+    depends_on:
+      - api
+
+  # Airflow Webserver
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: belly/airflow/Dockerfile.airflow.nodumb
+    container_name: belly-airflow-webserver
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__UNIT_TEST_MODE=False
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////app/belly/airflow/airflow.db
+      - AIRFLOW__CORE__DAGS_FOLDER=/app/belly/airflow/dags
+      - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
+      - AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS=False
+      - AIRFLOW__API__AUTH_BACKENDS=airflow.api.auth.backend.basic_auth
+      - AIRFLOW_USERNAME=${AIRFLOW_USERNAME:-admin}
+      - AIRFLOW_PASSWORD=${AIRFLOW_PASSWORD:-admin}
+      - AIRFLOW_EMAIL=${AIRFLOW_EMAIL:-admin@belly.local}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+    command: bash -c "airflow db upgrade && airflow webserver"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./belly/airflow:/app/belly/airflow
+      - airflow_logs:/app/belly/airflow/logs
+    restart: always
+    depends_on:
+      - api
+
+  # Nginx Reverse Proxy (optional - for routing)
+  nginx:
+    image: nginx:alpine
+    container_name: belly-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    restart: always
+    depends_on:
+      - api
+      - frontend
+
+volumes:
+  redis_data:
+  airflow_logs:
+  api_logs:
+  producer_logs:
+  consumer_logs:
+
+networks:
+  default:
+    name: belly-network
